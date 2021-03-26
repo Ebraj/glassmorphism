@@ -1,0 +1,41 @@
+// Sites for the great linear-gradient
+body{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    //Making the things all at the center
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Now styling the box
+.box-container{
+    background-color: #ffffff59;
+    padding: 50px;
+    border-radius: 5px;
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff59;
+    font-size: 2rem;
+
+    // Creating the box-shodow
+    box-shadow: 2.5px 2.5px 30px 0px rgba(230, 230, 230, 0.459);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    // Making responsive
+    @media screen and (max-width:"500px"){
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+
+    #{&}--child{
+        padding: 2rem;
+        border-radius: 5px;
+        background-color: #ffffff13;
+        backdrop-filter: blur(15px);
+        border: 1px solid #ffffff59;
+        box-shadow: 5px 5px 15px 0px rgba(230, 230, 230, 0.253);
+    }
+}
+

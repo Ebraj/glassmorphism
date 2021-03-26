@@ -1,0 +1,54 @@
+body {
+  background: #11998e;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#38ef7d), to(#11998e));
+  background: linear-gradient(to right, #38ef7d, #11998e);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box-container {
+  background-color: #ffffff59;
+  padding: 50px;
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid #ffffff59;
+  font-size: 2rem;
+  -webkit-box-shadow: 2.5px 2.5px 30px 0px rgba(230, 230, 230, 0.459);
+          box-shadow: 2.5px 2.5px 30px 0px rgba(230, 230, 230, 0.459);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+  .box-container {
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.box-container .box-container--child {
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #ffffff13;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border: 1px solid #ffffff59;
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(230, 230, 230, 0.253);
+          box-shadow: 5px 5px 15px 0px rgba(230, 230, 230, 0.253);
+}
+/*# sourceMappingURL=style.css.map */
